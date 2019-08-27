@@ -4,10 +4,11 @@ import Styles from "./styles";
 import ProductList from "../../screens/productList";
 import ProductEdit from "../../screens/productEdit";
 import ProductDetails from "../../screens/productDetails";
+import containers from '../../screens/productList/containers';
 
 const AppNavigator = createStackNavigator({
   Home: {
-    screen: ProductList
+    screen: containers
   },
   ProductEdit: {
     screen: ProductEdit

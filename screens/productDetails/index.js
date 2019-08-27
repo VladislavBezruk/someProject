@@ -10,7 +10,7 @@ export default class ProductDetails extends Component {
       return (
         <View style={Styles.center}>
         <Image
-          style={{width: 300, height: 300}}
+          style={{width: 400, height: 400}}
           source={ { uri: item.avatar_url }}
         />
         <Text style={Styles.textName}>{name}</Text>   
