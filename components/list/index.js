@@ -9,7 +9,7 @@ export default class ListOfProducts extends Component {
         this.props.list.map((el, i) => (
             <ListItem
             key={i}
-            leftAvatar={{ source: { uri: el.avatar_url } }}
+            leftAvatar={{ source: { uri: el.image_url } }}
             title={el.name}
             onPress={() => this.props.navigation.navigate('ProductDetails', {item: el})}
             />

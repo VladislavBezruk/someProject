@@ -12,7 +12,12 @@ export default class ProductList extends Component {
     render() {
       return (
         <View >
-          <ListOfProducts navigation={this.props.navigation} list={this.props.list}/>  
+        <ListOfProducts navigation={this.props.navigation} list={this.props.list}/>  
+
+        <Button
+        title="Добавить"
+        onPress={() => this.props.navigation.navigate('ProductAdd')}
+        />          
         </View>
       );
     }  

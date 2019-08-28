@@ -1,14 +1,16 @@
 import {createAppContainer, createStackNavigator} from 'react-navigation';
-import Styles from "./styles";
 
-import ProductList from "../../screens/productList";
-import ProductEdit from "../../screens/productEdit";
-import ProductDetails from "../../screens/productDetails";
-import containers from '../../screens/productList/containers';
+import ProductAdd from "../../screens/productAdd/container";
+import ProductEdit from "../../screens/productEdit/container";
+import ProductDetails from "../../screens/productDetails/container";
+import ProductList from '../../screens/productList/container';
 
 const AppNavigator = createStackNavigator({
-  Home: {
-    screen: containers
+  ProductList: {
+    screen: ProductList
+  },
+  ProductAdd: {
+    screen: ProductAdd
   },
   ProductEdit: {
     screen: ProductEdit
@@ -17,7 +19,7 @@ const AppNavigator = createStackNavigator({
     screen: ProductDetails
   },
 }, {
-    initialRouteName: 'Home',
+    initialRouteName: 'ProductList',
 });
 
 export default createAppContainer(AppNavigator);

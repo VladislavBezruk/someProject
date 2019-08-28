@@ -1,13 +1,15 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import ProductList from "./index"
-import {showList} from "../../store/products/actions"
+import ProductAdd from "./index"
+import {editProduct, addProduct} from "../../store/products/actions"
 
 class Container extends Component {
     render() {
-    return <ProductList 
-    list={this.props.list} 
-    navigation={this.props.navigation}/>
+        return <ProductAdd 
+            list={this.props.list} 
+            navigation={this.props.navigation}
+            addProduct={this.props.addProduct} 
+            />
     }  
 }
 
@@ -18,7 +20,7 @@ const putStateToProps = state => {
 }
 
 const putDispatchToProps = {
-    showList
+    addProduct
 }
 
 export default connect(putStateToProps, putDispatchToProps)(Container)
